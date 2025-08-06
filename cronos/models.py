@@ -2,6 +2,7 @@
 from pydantic import BaseModel
 from datetime import datetime
 
+
 class EventoJogador(BaseModel):
     id_player: str
     tipo_acao: str
