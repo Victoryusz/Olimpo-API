@@ -1,5 +1,5 @@
 # Contrato Ares -> Cronos
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 from datetime import datetime
 
 
