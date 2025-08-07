@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from datetime import datetime
 
+
 # ⚠️ ESTE É O MODELO DE ENTRADA QUE ATENA RECEBE DO CRONOS
 class EventoParaAnalise(BaseModel):
     id_evento: str

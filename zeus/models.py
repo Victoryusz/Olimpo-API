@@ -7,6 +7,7 @@ class EstadoAtualizado(BaseModel):
     mensagem: str
     estado_jogo: dict
 
+
 class ResultadoFinalAcao(BaseModel):
     id_evento: str
     id_player_afetado: str

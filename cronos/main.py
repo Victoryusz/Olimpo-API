@@ -11,10 +11,12 @@ app = FastAPI(title="API Cronos - O Guardião do Tempo")
 # URL da Atena
 ATENA_URL = "http://localhost:8003/analisar-evento"
 
+
 # Modelo de resposta
 class RespostaEvento(BaseModel):
     mensagem: str
     id_evento: str
+
 
 @app.post("/registrar-evento", response_model=RespostaEvento)
 def registrar_evento(evento: EventoJogador):
@@ -40,15 +42,15 @@ def registrar_evento(evento: EventoJogador):
         # Resposta com o ID do evento para Ares
         return RespostaEvento(
             mensagem="Evento registrado com sucesso e enviado para Atena.",
-            id_evento=id_evento
+            id_evento=id_evento,
         )
 
     except requests.exceptions.RequestException as e:
         print(f"Erro ao conectar com Atena: {e}")
         return RespostaEvento(
-            mensagem="Falha ao enviar evento para Atena.",
-            id_evento="erro"
+            mensagem="Falha ao enviar evento para Atena.", id_evento="erro"
         )
+
 
 # Rodar servidor
 if __name__ == "__main__":

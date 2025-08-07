@@ -37,14 +37,13 @@ def estado_final(resultado: ResultadoFinalAcao):
 
     # Agora, Zeus CRIA o MODELO DE SAÍDA
     resposta_final = EstadoAtualizado(
-        status="sucesso",
-        mensagem=resultado.mensagem_log,
-        estado_jogo=estado_do_jogo
+        status="sucesso", mensagem=resultado.mensagem_log, estado_jogo=estado_do_jogo
     )
     # ⚠️----------- FIM DA LÓGICA DE ATUALIZAÇÃO DO ZEUS ----------- ⚠️
-    
+
     # Zeus retorna o modelo de SAÍDA para a Atena
     return resposta_final
+
 
 if __name__ == "__main__":
     uvicorn.run("zeus.main:app", host="0.0.0.0", port=8004, reload=True)
