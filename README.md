@@ -1,4 +1,4 @@
-## OLIMPO-API ##
+## OLIMPO-API ## 
 Um projeto de microserviços em Python (FastAPI) com temática de mitologia grega, projetado para simular o fluxo de uma ação em um sistema de jogo online. Cada API representa uma entidade com uma responsabilidade única, demonstrando uma arquitetura desacoplada e escalável.
 
 **Arquitetura e Tecnologias**
@@ -17,4 +17,7 @@ O projeto simula a seguinte cadeia de eventos, partindo de uma ação do jogador
 API Ares: Recebe a entrada do jogador (ex: um ataque) e a encaminha para o próximo serviço.
 API Cronos: Atua como o "guardião do tempo," registrando o evento e mantendo um histórico antes de passá-lo para a análise.
 API Atena: Recebe o evento e aplica a lógica de negócio (cálculo de dano, validação de regras).
+
 API Zeus: Atua como a "fonte da verdade," atualiza o estado final do jogo e retorna a resposta completa para o jogador.
+
+⚠️ AOS RECRUTADORES: USO DE IA COMO FERRAMENTA DE APRENDIZADO. (Método Socrático, Método de Caso & Aprendizado Ativo) ⚠️
